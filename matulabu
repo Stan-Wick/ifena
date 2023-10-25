@@ -1,6 +1,14 @@
-syms x y
-f(x) = sqrt(1-(x^2))
-val = f(0.5)
-expr1 = f(y)
-expr2 = f(cos(x))
-g(x) = f(f(x))
+% Define the angles in radians
+x1 = pi/100;
+x2 = pi/10;
+x3 = pi/6;
+
+% Calculate relative errors
+RelativeError100 = abs((sin(x1) - x1) / sin(x1));
+RelativeError10 = abs((sin(x2) - x2) / sin(x2));
+RelativeError6 = abs((sin(x3) - x3) / sin(x3));
+
+% Display the relative errors
+disp(['Relative Error for x = pi/100: ', num2str(RelativeError100)]);
+disp(['Relative Error for x = pi/10: ', num2str(RelativeError10)]);
+disp(['Relative Error for x = pi/6: ', num2str(RelativeError6)]);
