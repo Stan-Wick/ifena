@@ -1,9 +1,18 @@
-% Count the number of elements between 50 and 100
-CountLast50 = uint8(sum(Random100 >= 50 & Random100 <= 100));
+% Define anonymous functions for ThirdSide and TriangleArea
+ThirdSide = @(a, b, C) sqrt(a^2 + b^2 - 2*a*b*cosd(C));
+TriangleArea = @(a, b, C) 0.5 * a * b * sind(C);
 
-% Generate the count report string
-Report = ['There are ' , num2str(CountLast50), ' elements with a value between 50 and 100.'];
-CountReport = string(Report);
+% Given values
+a = 5;
+b = 8;
+C = 50; % in degrees
 
-% Display the count report
-disp(CountReport);
+% Compute the length of side c using ThirdSide function
+SideC = ThirdSide(a, b, C);
+
+% Compute the area of the triangle using TriangleArea function
+AreaABC = TriangleArea(a, b, C);
+
+% Display the results
+disp(['Length of side c: ', num2str(SideC)]);
+disp(['Area of the triangle: ', num2str(AreaABC)]);
