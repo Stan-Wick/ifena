@@ -1,18 +1,9 @@
-% Define anonymous functions for ThirdSide and TriangleArea
-ThirdSide = @(a, b, C) sqrt(a^2 + b^2 - 2*a*b*cosd(C));
-TriangleArea = @(a, b, C) 0.5 * a * b * sind(C);
+% solution
+A1 = sqrt((a^2)+(b^2)+(c^2));
+Answer1 = A1
 
-% Given values
-a = 5;
-b = 8;
-C = 50; % in degrees
+A2 = (a*(b+c))/(25*d^2);
+Answer2 = A2
 
-% Compute the length of side c using ThirdSide function
-SideC = ThirdSide(a, b, C);
-
-% Compute the area of the triangle using TriangleArea function
-AreaABC = TriangleArea(a, b, C);
-
-% Display the results
-disp(['Length of side c: ', num2str(SideC)]);
-disp(['Area of the triangle: ', num2str(AreaABC)]);
+A3 = (a*c)/(5*((b+d)^(2/3)));
+Answer3 = A3
