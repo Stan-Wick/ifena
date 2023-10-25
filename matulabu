@@ -1,15 +1,9 @@
-% Define CityName character array
-CityName = 'Istanbul, Turkey';
+% Count the number of elements between 50 and 100
+CountLast50 = uint8(sum(Random100 >= 50 & Random100 <= 100));
 
-% Define LatLong row vector
-Latitude = 41.0082;
-Longitude = 28.9784;
-LatLong = single([Latitude, Longitude]);
+% Generate the count report string
+Report = ['There are ' , num2str(CountLast50), ' elements with a value between 50 and 100.'];
+CountReport = string(Report);
 
-% Define CityLocation cell array
-CityLocation = {CityName, LatLong};
-
-% Display the results
-disp(['City Name: ', CityLocation{1}]);
-disp(['Latitude: ', num2str(CityLocation{2}(1))]);
-disp(['Longitude: ', num2str(CityLocation{2}(2))]);
+% Display the count report
+disp(CountReport);
