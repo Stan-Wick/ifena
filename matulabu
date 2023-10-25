@@ -1,9 +1,16 @@
-% solution
-A1 = sqrt((a^2)+(b^2)+(c^2));
-Answer1 = A1
+% Create an evenly-spaced row vector A with elements starting at 0 and ending at 50 with increments of 0.5
+A = 0:0.5:50;
 
-A2 = (a*(b+c))/(25*d^2);
-Answer2 = A2
+% Create a row vector B with 80 evenly-spaced elements starting at 0 and ending at pi/2
+B = linspace(0, pi/2, 80);
 
-A3 = (a*c)/(5*((b+d)^(2/3)));
-Answer3 = A3
+% Create a row vector C that is an unsigned 8-bit integer with elements counting backward from 200 to 0 in increments of 5
+C = uint8(200:-5:0);
+
+% Display the vectors
+disp('Vector A:');
+disp(A);
+disp('Vector B:');
+disp(B);
+disp('Vector C:');
+disp(C);
