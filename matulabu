@@ -1,8 +1,15 @@
-x = (23.2-7.1/2.2)/((5.1-3.7)*(3.4+4.2))
-Answer1 = x
+function [B, C, D] = matrixFun(A)
+%Enter the commands for your function below. Be sure to assign values 
+%to each of the output variables defined in the function command on line 1.
+    % Replace negative elements with 999
+    B = A;
+    B(B < 0) = 999;
 
-y = (35.7*64.1-(6.0^3))/(43+(5^2))
-Answer2 = y
+    % Replace positive elements with their square root
+    C = sqrt(A);
+    C(A > 0) = sqrt(A(A > 0));
 
-z = (2.1+8.0)^(-1/3)
-Answer3 = z
+    % Find elements between -2 and 2, sort them, and store in column vector D
+    filtered_elements = A(A >= -2 & A <= 2);
+    D = sort(filtered_elements(:));
+end
